@@ -1,0 +1,3 @@
+*.exe
+!dist/TrueOldiesChannel.exe
+*.zip
