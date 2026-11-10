@@ -19,8 +19,8 @@ jobs:
           GOOS: windows
           GOARCH: amd64
           CGO_ENABLED: '0'
-        run: go build -ldflags="-s -w -H windowsgui" -o TrueOldiesChannel.exe .
+        run: go build -ldflags="-s -w -H windowsgui" -o TrueOldiesChannel-Windows-x64.exe .
       - uses: actions/upload-artifact@v4
         with:
-          name: TrueOldiesChannel
-          path: TrueOldiesChannel.exe
+          name: TrueOldiesChannel-Windows-x64
+          path: TrueOldiesChannel-Windows-x64.exe

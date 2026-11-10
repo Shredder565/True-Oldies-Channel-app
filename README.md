@@ -1,12 +1,14 @@
 # True Oldies Channel
 
-A tiny Windows desktop app, styled like a vintage tabletop radio, that tunes in to the True Oldies Channel stream and shows the song now playing.
+A tiny **Windows** desktop app, styled like a vintage tabletop radio, that tunes in to the True Oldies Channel stream and shows the song now playing.
 
 ![screenshot](screenshot.png)
 
-## Download
+## Download for Windows
 
-Grab **[`dist/TrueOldiesChannel.exe`](dist/TrueOldiesChannel.exe)** — a single file, no install. Double-click and it warms up and starts playing.
+### ⬇️ [**TrueOldiesChannel-Windows-x64.exe**](https://github.com/Shredder565/True-Oldies-Channel-app/raw/main/TrueOldiesChannel-Windows-x64.exe)
+
+For Windows 10 / 11 (64-bit). It's a single file with nothing to install: download it, double-click, and the radio warms up and starts playing. The same file is in this repository's main file list.
 
 Windows SmartScreen may warn the first time because the exe isn't code-signed: choose **More info → Run anyway**.
 
@@ -24,9 +26,9 @@ The player reconnects automatically if the stream drops.
 ### Command-line options
 
 ```
-TrueOldiesChannel.exe -volume 50
-TrueOldiesChannel.exe -standby                # start switched off
-TrueOldiesChannel.exe -url https://.../stream.mp3
+TrueOldiesChannel-Windows-x64.exe -volume 50
+TrueOldiesChannel-Windows-x64.exe -standby                # start switched off
+TrueOldiesChannel-Windows-x64.exe -url https://.../stream.mp3
 ```
 
 ## How it works
@@ -41,7 +43,7 @@ TrueOldiesChannel.exe -url https://.../stream.mp3
 Requires Go 1.24+.
 
 ```sh
-GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -ldflags="-s -w -H windowsgui" -o TrueOldiesChannel.exe .
+GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -ldflags="-s -w -H windowsgui" -o TrueOldiesChannel-Windows-x64.exe .
 ```
 
 Pushes to `main` also build the exe in GitHub Actions (see the **Actions** tab for the artifact).
